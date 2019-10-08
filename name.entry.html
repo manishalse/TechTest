@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="NameEntriesForm">
+
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.js"></script>
+  <script src="script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<header>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+</header>
+
+<body ng-controller="NameController">
+  <form name="nameentry" ng-submit="onsubmit()" novalidate>
+    <div id="wrapleft" class="sec">
+      <h1>Entry Form</h1>
+      <br />
+      <br />
+
+      <div>
+        <label class="lbl">First Name</label>
+        <input type="text" name="name" id="fntxt" maxlength="20" class="formtext" ng-model="name" required />
+      </div>
+      <br />
+      <br />
+      <div>
+        <label class="lbl">Department</label>
+        <input type="text" name="dept" id="depttxt" maxlength="50" class="formtext" ng-model="dept" required />
+      </div>
+      <br />
+      <br />
+      <div>
+        <label class="lbl">Quote</label>
+        <input type="text" name="quote" id="qtetxt" maxlength="100" class="formtext" ng-model="quote" required />
+      </div>
+      <br />
+      <br />
+      <div class="chkalign">
+        <input type="checkbox" ng-change="changestyle()" ng-model="chkselct" />
+        <label class="lbl">Use dark theme</label>
+
+        <br/>
+        <br/>
+        <input type="submit" name="submit" value="Next>" />
+      </div>
+      <br/><br/>
+      <br/><br/>
+      <br/>
+      <br/>
+      <div>
+        <span ng-show="hasError('required')">
+      Before continuing all fields must be filled.
+    </span>
+      </div>
+    </div>
+    <div id="vl"></div>
+    <div id="wrapright" class="sec">
+      <h1> Card Preview</h1>
+      <br />
+      <br />
+      <div id="disp" ng-style="bckgrndchng">
+        <label for="fnplaceholder" id="fnplbl">{{name}}</label>
+        <br />
+        <br />
+        <label for="dptplaceholder" id="dptlbl">{{dept}}</label>
+        <br />
+        <br />
+        <label for="qteplaceholder" ng-if="quote" id="qtelbl">{{quote}}</label>
+        <label for="qteplaceholder" ng-if="!quote">{{quote}}</label>
+        <br />
+        <br />
+      </div>
+    </div>
+  </form>
+</body>
+<footer>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+</footer>
+
+</html>

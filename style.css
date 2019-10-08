@@ -1,0 +1,89 @@
+/* Styles go here */
+body {
+  background-color:#F5F5DC;
+}
+
+#wrapleft {
+  height: 100px;
+  width: 48%;
+  float: left;
+}
+
+#vl {
+  border-left: 2px solid black;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 100px;
+  width:4%;
+}
+
+#wrapright {
+  height: 100px;
+  width: 48%;
+  float: right;
+}
+
+input[type=text] {
+    border: 2px Solid;
+    margin-right: 50%;
+    float: right; 
+    width:250px;
+}
+
+input[type=submit] {
+  margin-left: 5%;
+  float: left;
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 20px;
+  padding: 10px 40px;
+  border: solid;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 4px 4px;
+}
+
+.chkalign {
+  margin-left: 14%;
+  float: left;
+}
+
+.lbl {
+  font-size:20px;
+}
+
+#disp {
+   border: 2px solid black;
+   height: 175px;
+   width: 400px;
+   text-align: center;
+   background-color: white;
+}
+
+
+span {
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+#fnplbl {
+  font-size: 30px;
+  font-weight: bold;
+  
+}
+
+#qtelbl:before,#qtelbl:after {
+  content:'"';
+  display:false;
+}
+
+#qtelbl {
+  font-style:italic;
+}
+
+
+
